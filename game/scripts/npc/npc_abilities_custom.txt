@@ -1,4 +1,5 @@
 #base "heroes/npc_dota_hero_abaddon.txt"
+#base "heroes/npc_dota_hero_alchemist.txt"
 "DOTAAbilities"
 {
 	"Version"		"1"

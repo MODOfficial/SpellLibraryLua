@@ -10,7 +10,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Abaddon.DeathCoil.Cast"
-		"ScriptFile"					"abilities/abaddon/mist_coil"
+		"ScriptFile"					"heroes/abaddon/mist_coil"
 		"BaseClass"						"ability_lua"
 		"AbilityTextureName"			"abaddon_death_coil"
 
@@ -72,7 +72,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Abaddon.AphoticShield.Cast"
-		"ScriptFile"					"abilities/abaddon/aphotic_shield"
+		"ScriptFile"					"heroes/abaddon/aphotic_shield"
 		"BaseClass"						"ability_lua"
 		"AbilityTextureName"			"abaddon_aphotic_shield"
 		
@@ -120,7 +120,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"ScriptFile"					"abilities/abaddon/curse_of_avernus"
+		"ScriptFile"					"heroes/abaddon/curse_of_avernus"
 		"BaseClass"						"ability_lua"
 		"AbilityTextureName"			"abaddon_frostmourne"
 		
@@ -170,7 +170,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Abaddon.BorrowedTime"
-		"ScriptFile"					"abilities/abaddon/borrowed_time"
+		"ScriptFile"					"heroes/abaddon/borrowed_time"
 		"BaseClass"						"ability_lua"
 		"AbilityTextureName"			"abaddon_borrowed_time"
 

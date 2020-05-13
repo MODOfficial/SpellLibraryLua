@@ -1,5 +1,15 @@
 function GameMode:ActivateFilters()
     GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, 'DamageFilter'), self)
+    GameRules:GetGameModeEntity():SetBountyRunePickupFilter(Dynamic_Wrap(GameMode, 'RuneFilter'), self)
+end
+
+function GameMode:RuneFilter(data)
+    PrintTable(data)
+    local ent = PlayerResource:GetSelectedHeroEntity(data.player_id_const)
+    if ent then 
+        data.gold_bounty = data.gold_bounty * math.max(GetMultipleBountyBonus(ent),1)
+    end 
+    return true
 end
 
 function GameMode:DamageFilter(filterDamage)
