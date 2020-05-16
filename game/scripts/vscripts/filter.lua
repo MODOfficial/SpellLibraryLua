@@ -47,6 +47,7 @@ function GameMode:DamageFilter(filterDamage)
 end
 
 function GameMode:OnApplyDamage(data)
+ 
     return data
 end
 
@@ -84,6 +85,11 @@ function GameMode:OnTakeDamageFilter(data)
             return false
         end 
     end
+
+    -- local modifier_primal_split_unit = data.victim:FindModifierByName('modifier_primal_split_unit')
+    -- if modifier_primal_split_unit and data.damage >= data.victim:GetHealth() then 
+    --     modifier_primal_split_unit:OnDeathPrimalSplit()
+    -- end
 
     return data.damage
 end

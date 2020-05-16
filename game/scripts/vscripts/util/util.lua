@@ -25,6 +25,29 @@ function GetMultipleBountyBonus(hUnit)
 	end
 	return bonus
 end 
+
+function table.length(tbl)
+	local count = 0 
+
+	for k,v in pairs(tbl) do
+		count = count + 1
+	end 
+
+	return count
+end 
+
+function CDOTA_BaseNPC:FilterModifiers(callback)
+	local list = {}
+	if not callback then print('[FilterModifiers] Error! Callback not found') return list end
+	for k,v in pairs(self:FindAllModifiers()) do
+		if callback(v) then 
+			table.insert(list,v)
+		end 
+	end 
+
+	return list
+end 
+
 --[[
 	ability
 	modifier

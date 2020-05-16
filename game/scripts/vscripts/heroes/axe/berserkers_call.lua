@@ -43,7 +43,7 @@ function ability_berserkers_call:OnSpellStart()
 	end
 
 	-- if enemies table is empty play random responses_zero_enemy
-	if next (enemies_in_radius) == nil then
+	if #enemies_in_radius == 0 then
 		self:GetCaster():EmitSound("axe_axe_anger_0"..RandomInt(1,3))
 	else
 		self:GetCaster():EmitSound("axe_axe_ability_berserk_0"..RandomInt(1,9))

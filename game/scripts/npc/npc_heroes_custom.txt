@@ -22,16 +22,18 @@
 	}
 	"npc_dota_hero_axe"
 	{
-		"Ability1"		"axe_berserkers_call"
-		"Ability2"		"axe_battle_hunger"
-		"Ability3"		"axe_counter_helix"
-		"Ability4"		"generic_hidden"
-		"Ability5"		"generic_hidden"
-		"Ability6"		"axe_culling_blade"
-		"Ability7"		"ability_berserkers_call"
-		"Ability8"		"ability_battle_hunger"
-		"Ability9"		"ability_counter_helix"
-		"Ability10"		"ability_culling_blade"
+		"Ability1"		"ability_berserkers_call"
+		"Ability2"		"ability_battle_hunger"
+		"Ability3"		"ability_counter_helix"
+		"Ability6"		"ability_culling_blade"
 	}
+
+    "npc_dota_hero_brewmaster"
+    {
+        "Ability1"      "ability_thunder_clap"
+        "Ability2"      "ability_cinder_brew"
+        "Ability3"      "ability_drunken_brawler"
+        "Ability6"     "ability_primal_split"
+    }
 
 }
