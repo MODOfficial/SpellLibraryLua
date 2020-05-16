@@ -15,7 +15,7 @@ function ability_primal_split:OnSpellStart()
     local abilityLvl = self:GetLevel()
     local origin = caster:GetOrigin()
     local earth_position = origin + caster:GetForwardVector() * 100
-    local duration = 4 --self:GetSpecialValueFor('duration')
+    local duration = self:GetSpecialValueFor('duration')
     local creeps = {
         storm =  CreateUnitByName('npc_dota_brewmaster_storm_' .. abilityLvl, RotatePosition(origin, QAngle(0, 90, 0), earth_position), true, caster, caster, caster:GetTeamNumber()),
         earth = CreateUnitByName('npc_dota_brewmaster_earth_' .. abilityLvl, earth_position, true, caster, caster, caster:GetTeamNumber()),
