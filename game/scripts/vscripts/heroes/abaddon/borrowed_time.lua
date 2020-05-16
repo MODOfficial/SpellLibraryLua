@@ -29,24 +29,4 @@ function modifier_abaddon_borrowed_time_lua_active:OnCreated()
     self.caster:Purge(false, true, true, true, false)
 end
 
-function modifier_abaddon_borrowed_time_lua_active:OnIntervalThink()
-    if IsClient() then return end
-
-    local units = FindUnitsInRadius(self.caster:GetTeam(), 
-    self.parent:GetOrigin(), 
-    nil, 
-    self.radius,
-    DOTA_UNIT_TARGET_TEAM_FRIENDLY, 
-    self.TargetType, 
-    self.TargetFlags,
-    FIND_ANY_ORDER, 
-    false)
-
-    for k,v in pairs(units) do 
-        if v ~= self.caster then 
-            self.caster:SetCursorCastTarget(v)
-            self.ability_mist_coil:OnSpellStart()
-        end
-    end
-end
 

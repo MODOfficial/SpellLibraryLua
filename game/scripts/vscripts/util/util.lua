@@ -25,6 +25,33 @@ function GetMultipleBountyBonus(hUnit)
 	end
 	return bonus
 end 
+--[[
+	ability
+	modifier
+	duration
+	count
+	updateStack
+	caster
+	data
+]]
+function CDOTA_BaseNPC:AddStackModifier(data)
+	data.data = data.data or {}
+	data.data.duration = (data.duration or -1)
+	if self:HasModifier(data.modifier) then
+		local current_stack = self:GetModifierStackCount( data.modifier, data.ability )
+		if data.updateStack then
+			self:AddNewModifier(data.caster or self, data.ability,data.modifier,data.data)
+		end
+		self:SetModifierStackCount( data.modifier, data.ability, current_stack + (data.count or 1) )
+		if self:GetModifierStackCount( data.modifier, data.ability ) < 1 then
+			self:RemoveModifierByName(data.modifier)
+		end
+	else
+		self:AddNewModifier(data.caster or self, data.ability,data.modifier,data.data)
+		self:SetModifierStackCount( data.modifier, data.ability, (data.count or 1) )
+	end
+	return self:GetModifierStackCount( data.modifier, data.ability )
+end
 
 function PrintTable(t, indent, done)
 	--print ( string.format ('PrintTable type %s', type(keys)) )
