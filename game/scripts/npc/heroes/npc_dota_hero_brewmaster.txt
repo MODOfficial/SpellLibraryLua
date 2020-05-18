@@ -7,14 +7,14 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/brewmaster/thunder_clap"
+        "AbilityTextureName"            "brewmaster_thunder_clap"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilitySound"					"Hero_Brewmaster.ThunderClap"
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "brewmaster_thunder_clap"
-        "ScriptFile"                    "heroes/brewmaster/thunder_clap"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -75,15 +75,15 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/brewmaster/cinder_brew"
+		"AbilityTextureName"            "brewmaster_cinder_brew"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Brewmaster.DrunkenHaze.Cast"
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "brewmaster_cinder_brew"
-        "ScriptFile"                    "heroes/brewmaster/cinder_brew"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -138,15 +138,15 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/brewmaster/drunken_brawler"
+        "AbilityTextureName"            "brewmaster_drunken_brawler"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilitySound"					"Hero_Brewmaster.Brawler.Crit"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 		"AbilityCastGestureSlot"		"DEFAULT"
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "brewmaster_drunken_brawler"
-        "ScriptFile"                    "heroes/brewmaster/drunken_brawler"
 		
 
 		// Time		
@@ -202,6 +202,9 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/brewmaster/primal_split"
+        "AbilityTextureName"            "brewmaster_primal_split"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
@@ -209,9 +212,6 @@
 		"AbilitySound"					"Hero_Brewmaster.PrimalSplit.Spawn"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "brewmaster_primal_split"
-        "ScriptFile"                    "heroes/brewmaster/primal_split"
 
 		"HasScepterUpgrade"			"0"
 

@@ -11,9 +11,9 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Bristleback.ViscousGoo.Cast"
+		"BaseClass"						"ability_lua"
 		"ScriptFile"					"heroes/bristleback/viscous_nasal_goo"
 		"AbilityTextureName"			"bristleback_viscous_nasal_goo"
-		"BaseClass"						"ability_lua"
 
 		"HasScepterUpgrade"			"0"
 
@@ -92,16 +92,17 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/bristleback/quill_spray"
+		"AbilityTextureName"			"bristleback_quill_spray"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Bristleback.QuillSpray"
-		"ScriptFile"					"heroes/bristleback/quill_spray"
-		"AbilityTextureName"			"bristleback_quill_spray"
-		"BaseClass"						"ability_lua"
-
+		
+	
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastAnimation"			"ACT_INVALID"
@@ -161,11 +162,12 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilitySound"					"Hero_Bristleback.Bristleback"
+		"BaseClass"						"ability_lua"
 		"ScriptFile"					"heroes/bristleback/bristleback"
 		"AbilityTextureName"			"bristleback_bristleback"
-		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySound"					"Hero_Bristleback.Bristleback"
+
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -211,9 +213,9 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"BaseClass"						"ability_lua"
 		"ScriptFile"					"heroes/bristleback/warpath"
 		"AbilityTextureName"			"bristleback_warpath"
-		"BaseClass"						"ability_lua"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

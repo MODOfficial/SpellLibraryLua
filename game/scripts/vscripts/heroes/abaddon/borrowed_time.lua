@@ -1,5 +1,5 @@
 
-LinkLuaModifier('modifier_abaddon_borrowed_time_lua_active', 'abilities/abaddon/borrowed_time', LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier('modifier_abaddon_borrowed_time_lua_active', 'heroes/abaddon/borrowed_time', LUA_MODIFIER_MOTION_NONE)
 ability_borrowed_time = class({})
 
 function ability_borrowed_time:OnSpellStart()
@@ -24,6 +24,7 @@ modifier_abaddon_borrowed_time_lua_active = class({
 })
 
 function modifier_abaddon_borrowed_time_lua_active:OnCreated()
+    if IsClient() then return end
     self.caster = self:GetCaster()
     self.parent = self:GetParent()
     self.caster:Purge(false, true, true, true, false)

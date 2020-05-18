@@ -1,5 +1,5 @@
 ability_aphotic_shield = class({})
-LinkLuaModifier('modifier_abaddon_aphotic_shield_lua', 'abilities/abaddon/aphotic_shield', LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier('modifier_abaddon_aphotic_shield_lua', 'heroes/abaddon/aphotic_shield', LUA_MODIFIER_MOTION_NONE)
 function ability_aphotic_shield:OnSpellStart()
     local caster = self:GetCaster()
     local target = self:GetCursorTarget()

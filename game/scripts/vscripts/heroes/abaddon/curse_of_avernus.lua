@@ -4,10 +4,10 @@ function ability_curse_of_avernus:GetIntrinsicModifierName()
     return 'modifier_ability_curse_of_avernus_lua'
 end
 
-LinkLuaModifier('modifier_ability_curse_of_avernus_lua_debuff', 'abilities/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier('modifier_ability_curse_of_avernus_lua_buff', 'abilities/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier('modifier_ability_curse_of_avernus_lua_debuff_visible', 'abilities/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
-LinkLuaModifier('modifier_ability_curse_of_avernus_lua', 'abilities/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier('modifier_ability_curse_of_avernus_lua_debuff', 'heroes/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier('modifier_ability_curse_of_avernus_lua_buff', 'heroes/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier('modifier_ability_curse_of_avernus_lua_debuff_visible', 'heroes/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier('modifier_ability_curse_of_avernus_lua', 'heroes/abaddon/curse_of_avernus', LUA_MODIFIER_MOTION_NONE)
 modifier_ability_curse_of_avernus_lua = class({
     IsHidden                = function(self) return true end,
     IsPurgable              = function(self) return false end,

@@ -1,18 +1,18 @@
 ""
 {
-    	//=================================================================================================================
+    //=================================================================================================================
 	// Ability: Axe Berserker's Call
 	//=================================================================================================================
 	"ability_berserkers_call"
 	{
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/axe/berserkers_call"
+        "AbilityTextureName"            "axe_berserkers_call"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Axe.Berserkers_Call"
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "axe_berserkers_call"
-        "ScriptFile"                    "heroes/axe/berserkers_call"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -60,6 +60,9 @@
 	//=================================================================================================================
 	"ability_battle_hunger"
 	{
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/axe/battle_hunger"
+        "AbilityTextureName"            "axe_battle_hunger"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -68,9 +71,6 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Axe.Battle_Hunger"
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "axe_battle_hunger"
-        "ScriptFile"                    "heroes/axe/battle_hunger"
 		
 		"HasScepterUpgrade"			"0"
 		
@@ -142,13 +142,13 @@
 	//=================================================================================================================
 	"ability_counter_helix"
 	{
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/axe/counter_helix"
+        "AbilityTextureName"            "axe_counter_helix"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilitySound"					"Hero_Axe.CounterHelix"
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "axe_counter_helix"
-        "ScriptFile"                    "heroes/axe/counter_helix"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -189,6 +189,9 @@
 	//=================================================================================================================
 	"ability_culling_blade"
 	{
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/axe/culling_blade"
+        "AbilityTextureName"            "axe_culling_blade"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"		
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -198,9 +201,6 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"FightRecapLevel"				"2"
-        "BaseClass"                     "ability_lua"
-        "AbilityTextureName"            "axe_culling_blade"
-        "ScriptFile"                    "heroes/axe/culling_blade"
 		"AbilitySound"					"Hero_Axe.Culling_Blade_Success"
 
 		// Casting

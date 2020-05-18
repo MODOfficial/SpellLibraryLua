@@ -2,7 +2,9 @@
 {
     "ability_mist_coil"
 	{
-
+		"ScriptFile"					"heroes/abaddon/mist_coil"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"abaddon_death_coil"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
@@ -10,9 +12,6 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Abaddon.DeathCoil.Cast"
-		"ScriptFile"					"heroes/abaddon/mist_coil"
-		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"abaddon_death_coil"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -62,7 +61,9 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5586"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ScriptFile"					"heroes/abaddon/aphotic_shield"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"abaddon_aphotic_shield"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"	
@@ -72,9 +73,6 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"FightRecapLevel"				"1"
 		"AbilitySound"					"Hero_Abaddon.AphoticShield.Cast"
-		"ScriptFile"					"heroes/abaddon/aphotic_shield"
-		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"abaddon_aphotic_shield"
 		
 
 		// Casting
@@ -117,12 +115,12 @@
 
 	"ability_curse_of_avernus"
 	{
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"ScriptFile"					"heroes/abaddon/curse_of_avernus"
 		"BaseClass"						"ability_lua"
 		"AbilityTextureName"			"abaddon_frostmourne"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		
 	
 		// Special
@@ -165,14 +163,14 @@
 	}
 	"ability_borrowed_time"
 	{
+		"ScriptFile"					"heroes/abaddon/borrowed_time"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"abaddon_borrowed_time"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Abaddon.BorrowedTime"
-		"ScriptFile"					"heroes/abaddon/borrowed_time"
-		"BaseClass"						"ability_lua"
-		"AbilityTextureName"			"abaddon_borrowed_time"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
