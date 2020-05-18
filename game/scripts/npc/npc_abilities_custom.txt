@@ -3,6 +3,7 @@
 #base "heroes/npc_dota_hero_axe.txt"
 #base "heroes/npc_dota_hero_brewmaster.txt"
 #base "heroes/npc_dota_hero_bristleback.txt"
+#base "heroes/npc_dota_hero_centaur.txt"
 "DOTAAbilities"
 {
 	"Version"		"1"

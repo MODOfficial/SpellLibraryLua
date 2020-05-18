@@ -36,6 +36,14 @@
         "Ability6"     "ability_primal_split"
     }
 
+	"npc_dota_hero_centaur"
+	{
+		"Ability1"		"ability_hoof_stomp"
+		"Ability2"		"ability_double_edge"
+		"Ability3"		"ability_return"
+		"Ability6"		"ability_stampede"
+	}
+
 	"npc_dota_hero_bristleback"
 	{
 		"Ability1"		"ability_viscous_nasal_goo"
