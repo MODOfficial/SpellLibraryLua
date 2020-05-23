@@ -100,7 +100,7 @@ function modifier_ability_bristleback_buff:OnTakeDamage( keys )
                         
             self.damageTaken = self.damageTaken + keys.damage
 			
-			local quill_spray_ability = self.parent:FindAbilityByName("imba_bristleback_quill_spray")
+			local quill_spray_ability = self.parent:FindAbilityByName("ability_quill_spray")
 			
 			if quill_spray_ability and quill_spray_ability:IsTrained() and self.damageTaken >= self.quill_release_threshold then
                 quill_spray_ability:OnSpellStart()

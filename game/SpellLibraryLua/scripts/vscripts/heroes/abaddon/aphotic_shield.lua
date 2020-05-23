@@ -14,21 +14,35 @@ function ability_aphotic_shield:OnSpellStart()
     target:EmitSound('Hero_Abaddon.AphoticShield.Cast')
 
 end
---
--- Absorb damage logic in filters.lua [L58 - L67]
---
+
 modifier_abaddon_aphotic_shield_lua = class({
     IsHidden                = function(self) return false end,
     IsPurgable              = function(self) return true end,
     IsDebuff                = function(self) return false end,
     IsBuff                  = function(self) return true end,
     RemoveOnDeath           = function(self) return true end,
+    DeclareFunctions        = function(self)
+        return {
+            MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE,
+        }
+    end,
+
+    GetModifierIncomingDamage_Percentage = function(self,data) 
+        self.absorbAmount = self.absorbAmount + data.damage
+        if self.absorbAmount > self.absorb then 
+            self:Destroy()
+        end 
+        print(self.absorbAmount)
+        return -100 
+    end,
 })
+
 
 function modifier_abaddon_aphotic_shield_lua:OnCreated(data)
     if IsClient() then return end
     self.absorb = data.absorb
     self.absorbAmount = 0
+    self.parent = self:GetParent()
     local shield_size = 70
     self.nfx = ParticleManager:CreateParticle('particles/units/heroes/hero_abaddon/abaddon_aphotic_shield.vpcf', PATTACH_CUSTOMORIGIN_FOLLOW,self:GetParent())
     ParticleManager:SetParticleControl(self.nfx, 1, Vector(shield_size,0,shield_size))

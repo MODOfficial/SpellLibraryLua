@@ -1,5 +1,5 @@
 function GameMode:ActivateFilters()
-    GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, 'DamageFilter'), self)
+    -- GameRules:GetGameModeEntity():SetDamageFilter(Dynamic_Wrap(GameMode, 'DamageFilter'), self)
     GameRules:GetGameModeEntity():SetBountyRunePickupFilter(Dynamic_Wrap(GameMode, 'RuneFilter'), self)
 end
 
@@ -52,45 +52,6 @@ function GameMode:OnApplyDamage(data)
 end
 
 function GameMode:OnTakeDamageFilter(data)
-
-    if data.victim:HasModifier('modifier_abaddon_borrowed_time_lua_active') then 
-        data.victim:Heal(data.damage, data.victim)
-        ProjectileManager:CreateTrackingProjectile({
-            Target = data.attacker,
-            Source = data.victim,
-            EffectName = "particles/units/heroes/hero_abaddon/abaddon_borrowed_time_heal.vpcf",
-            iMoveSpeed = 600,
-            vSourceLoc= data.victim:GetAbsOrigin(),
-            bDodgeable = false,
-        })
-        return false
-    end
-
-    local aphotic_shield = data.victim:FindModifierByName('modifier_abaddon_aphotic_shield_lua')
-
-    if aphotic_shield and aphotic_shield.absorbAmount < aphotic_shield.absorb then 
-        local absorbAmount = aphotic_shield.absorbAmount
-        aphotic_shield.absorbAmount = math.min(aphotic_shield.absorbAmount + data.damage,aphotic_shield.absorb)
-        if aphotic_shield.absorb == aphotic_shield.absorbAmount then 
-            aphotic_shield:Destroy()
-        end
-        data.damage = data.damage - (aphotic_shield.absorbAmount - absorbAmount)
-    end
-
-    local borrowed_time = data.victim:FindAbilityByName('ability_borrowed_time')
-    if borrowed_time and borrowed_time:IsCooldownReady() then 
-        local hp_threshold = borrowed_time:GetSpecialValueFor('hp_threshold')
-        if data.victim:GetHealth() - data.damage <= hp_threshold then
-            data.victim:CastAbilityNoTarget(borrowed_time, 0)
-            return false
-        end 
-    end
-
-    -- local modifier_primal_split_unit = data.victim:FindModifierByName('modifier_primal_split_unit')
-    -- if modifier_primal_split_unit and data.damage >= data.victim:GetHealth() then 
-    --     modifier_primal_split_unit:OnDeathPrimalSplit()
-    -- end
-
     return data.damage
 end
 
