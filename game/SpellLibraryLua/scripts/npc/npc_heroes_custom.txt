@@ -52,4 +52,12 @@
 		"Ability6"		"ability_warpath"
 	}
 
+	"npc_dota_hero_chaos_knight"
+	{
+		"Ability1"		"ability_chaos_bolt"
+		"Ability2"		"ability_reality_rift"
+		"Ability3"		"ability_chaos_strike"
+		"Ability6"		"ability_phantasm"
+	}
+
 }

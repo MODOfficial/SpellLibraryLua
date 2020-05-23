@@ -4,6 +4,7 @@
 #base "heroes/npc_dota_hero_brewmaster.txt"
 #base "heroes/npc_dota_hero_bristleback.txt"
 #base "heroes/npc_dota_hero_centaur.txt"
+#base "heroes/npc_dota_hero_chaos_knight.txt"
 "DOTAAbilities"
 {
 	"Version"		"1"
