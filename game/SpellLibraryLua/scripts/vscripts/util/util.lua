@@ -113,3 +113,89 @@ function PrintTable(t, indent, done)
 	  end
 	end
   end
+
+ -- https://github.com/Yahnich/Boss-Hunters/blob/6f1f7dc796ac2979932354353d7d5eea8a841b22/game/scripts/vscripts/libraries/utility.lua#L1825-L1853
+function CDOTABaseAbility:FireLinearProjectile(FX, velocity, distance, width, data, bDelete, bVision, vision)
+	local internalData = data or {}
+	local delete = false
+	if bDelete then delete = bDelete end
+	local provideVision = true
+	if bVision then provideVision = bVision end
+	local info = {
+		EffectName = FX,
+		Ability = self,
+		vSpawnOrigin = internalData.origin or self:GetCaster():GetAbsOrigin(), 
+		fStartRadius = width,
+		fEndRadius = internalData.width_end or width,
+		vVelocity = velocity,
+		fDistance = distance or 1000,
+		Source = internalData.source or self:GetCaster(),
+		iUnitTargetTeam = internalData.team or DOTA_UNIT_TARGET_TEAM_ENEMY,
+		iUnitTargetType = internalData.type or DOTA_UNIT_TARGET_ALL,
+		iUnitTargetFlags = internalData.type or DOTA_UNIT_TARGET_FLAG_NONE,
+		iSourceAttachment = internalData.attach or DOTA_PROJECTILE_ATTACHMENT_HITLOCATION,
+		bDeleteOnHit = delete,
+		fExpireTime = GameRules:GetGameTime() + 10.0,
+		bProvidesVision = provideVision,
+		iVisionRadius = vision or 100,
+		iVisionTeamNumber = self:GetCaster():GetTeamNumber(),
+		ExtraData = internalData.extraData
+	}
+	local projectile = ProjectileManager:CreateLinearProjectile( info )
+	return projectile
+end
+
+-- https://github.com/Yahnich/Boss-Hunters/blob/6f1f7dc796ac2979932354353d7d5eea8a841b22/game/scripts/vscripts/libraries/utility.lua#L180-L201
+function CalculateDistance(ent1, ent2, b3D)
+	local pos1 = ent1
+	local pos2 = ent2
+	if ent1.GetAbsOrigin then pos1 = ent1:GetAbsOrigin() end
+	if ent2.GetAbsOrigin then pos2 = ent2:GetAbsOrigin() end
+	local vector = (pos1 - pos2)
+	if b3D then
+		return vector:Length()
+	else
+		return vector:Length2D()
+	end
+end
+-- https://github.com/Yahnich/Boss-Hunters/blob/6f1f7dc796ac2979932354353d7d5eea8a841b22/game/scripts/vscripts/libraries/utility.lua#L180-L201
+function CalculateDirection(ent1, ent2)
+	local pos1 = ent1
+	local pos2 = ent2
+	if ent1.GetAbsOrigin then pos1 = ent1:GetAbsOrigin() end
+	if ent2.GetAbsOrigin then pos2 = ent2:GetAbsOrigin() end
+	local direction = (pos1 - pos2):Normalized()
+	direction.z = 0
+	return direction
+end
+-- https://github.com/Yahnich/Boss-Hunters/blob/6f1f7dc796ac2979932354353d7d5eea8a841b22/game/scripts/vscripts/libraries/utility.lua#L1684-L1697
+function CDOTA_Modifier_Lua:StartMotionController()
+	if not self:GetParent():IsNull() and not self:IsNull() and self.DoControlledMotion and self:GetParent():HasMovementCapability() then
+		self:GetParent():StopMotionControllers()
+		self:GetParent():InterruptMotionControllers(true)
+		self.controlledMotionTimer = Timers:CreateTimer(function()
+			if pcall( function() self:DoControlledMotion() end ) then
+				return 0.03
+			elseif not self:IsNull() then
+				self:Destroy()
+			end
+		end)
+	else
+	end
+end
+
+-- https://github.com/Yahnich/Boss-Hunters/blob/6f1f7dc796ac2979932354353d7d5eea8a841b22/game/scripts/vscripts/libraries/utility.lua#L1754-L1758
+function CDOTA_Modifier_Lua:StopMotionController(bForceDestroy)
+	FindClearSpaceForUnit(self:GetParent(), self:GetParent():GetAbsOrigin(), true)
+	if self.controlledMotionTimer then Timers:RemoveTimer(self.controlledMotionTimer) end
+	if bForceDestroy then self:Destroy() end
+end
+-- https://github.com/Yahnich/Boss-Hunters/blob/6f1f7dc796ac2979932354353d7d5eea8a841b22/game/scripts/vscripts/libraries/utility.lua#L1760-L1767
+function CDOTA_BaseNPC:StopMotionControllers(bForceDestroy)
+	if self.InterruptMotionControllers then self:InterruptMotionControllers(true) end
+	for _, modifier in ipairs( self:FindAllModifiers() ) do
+		if modifier.controlledMotionTimer then 
+			modifier:StopMotionController(bForceDestroy)
+		end
+	end
+end
