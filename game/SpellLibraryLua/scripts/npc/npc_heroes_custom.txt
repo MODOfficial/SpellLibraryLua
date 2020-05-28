@@ -68,19 +68,13 @@
 		"Ability6"		"ability_hookshot"
 	}
 
-	"npc_dota_hero_antimage"
+	"npc_dota_hero_bane"
 	{
-		"Ability1"		"antimage_mana_break"
-		"Ability2"		"antimage_blink"
-		"Ability3"		"antimage_counterspell"
-		"Ability4"		"generic_hidden"
-		"Ability5"		"generic_hidden"
-		"Ability6"		"antimage_mana_void"
-
-		"Ability7"		"ability_mana_break"
-		"Ability8"		"ability_blink"
-		"Ability9"		"ability_counterspell"	
-		"Ability10"		"ability_mana_void"
+		"Ability1"		"ability_nightmare"
+		"Ability2"		"ability_brain_sap"
+		"Ability3"		"ability_enfeeble"
+		"Ability6"		"ability_fiends_grip"
+		"Ability7"		"ability_nightmare_end"
 	}
 
 }
