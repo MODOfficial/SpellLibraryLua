@@ -77,4 +77,12 @@
 		"Ability7"		"ability_nightmare_end"
 	}
 
+	"npc_dota_hero_crystal_maiden"
+	{
+		"Ability1"		"ability_crystal_nova"
+		"Ability2"		"ability_frostbite"
+		"Ability3"		"ability_brilliance_aura"
+		"Ability6"		"ability_freezing_field"
+	}
+
 }

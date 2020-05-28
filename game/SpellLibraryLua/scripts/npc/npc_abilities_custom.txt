@@ -8,6 +8,7 @@
 #base "heroes/npc_dota_hero_rattletrap.txt"
 #base "heroes/npc_dota_hero_antimage.txt"
 #base "heroes/npc_dota_hero_bane.txt"
+#base "heroes/npc_dota_hero_crystal_maiden.txt"
 "DOTAAbilities"
 {
 	"Version"		"1"
