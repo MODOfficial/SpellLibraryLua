@@ -62,17 +62,25 @@
 
 	"npc_dota_hero_rattletrap"
 	{
-		"Ability1"		"rattletrap_battery_assault"
-		"Ability2"		"rattletrap_power_cogs"
-		"Ability3"		"rattletrap_rocket_flare"
-		"Ability4"		"rattletrap_overclocking"
-		"Ability5"		"generic_hidden"
-		"Ability6"		"rattletrap_hookshot"
+		"Ability1"		"ability_battery_assault"
+		"Ability2"		"ability_power_cogs"
+		"Ability3"		"ability_rocket_flare"
+		"Ability6"		"ability_hookshot"
+	}
 
-		"Ability7"		"ability_battery_assault"
-		"Ability8"		"ability_power_cogs"
-		"Ability9"		"ability_rocket_flare"
-		"Ability10"		"ability_hookshot"
+	"npc_dota_hero_antimage"
+	{
+		"Ability1"		"antimage_mana_break"
+		"Ability2"		"antimage_blink"
+		"Ability3"		"antimage_counterspell"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"antimage_mana_void"
+
+		"Ability7"		"ability_mana_break"
+		"Ability8"		"ability_blink"
+		"Ability9"		"ability_counterspell"	
+		"Ability10"		"ability_mana_void"
 	}
 
 }
