@@ -85,4 +85,21 @@
 		"Ability6"		"ability_freezing_field"
 	}
 
+	"npc_dota_hero_dark_willow"
+	{
+		"Ability1"		"dark_willow_bramble_maze"
+		"Ability2"		"dark_willow_shadow_realm"
+		"Ability3"		"dark_willow_cursed_crown"
+		"Ability4"		"dark_willow_bedlam"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"dark_willow_terrorize"
+
+		"Ability7"		"ability_bramble_maze"
+		"Ability8"		"ability_shadow_realm"
+		"Ability9"		"ability_cursed_crown"
+		"Ability10"		"ability_bedlam"
+		"Ability11"		"ability_terrorize"
+
+	}
+
 }

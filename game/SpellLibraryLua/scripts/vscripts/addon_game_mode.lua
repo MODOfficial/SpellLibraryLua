@@ -10,8 +10,6 @@ function Precache( context )
 	]]
 end
 require('gamemode')
-
-
 -- Create the game mode when we activate
 function Activate()
 	GameRules.AddonTemplate = GameMode()

@@ -9,6 +9,7 @@
 #base "heroes/npc_dota_hero_antimage.txt"
 #base "heroes/npc_dota_hero_bane.txt"
 #base "heroes/npc_dota_hero_crystal_maiden.txt"
+#base "heroes/npc_dota_hero_dark_willow.txt"
 "DOTAAbilities"
 {
 	"Version"		"1"
