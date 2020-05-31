@@ -1,0 +1,23 @@
+{
+  "name": "spelllibrary_lua",
+  "version": "1.0.0",
+  "description": "Dota 2 SpellLibrary Lua",
+  "main": "index.js",
+  "scripts": {
+    "install": "node scripts_install/install.js",
+    "dev": "node scripts_install/install.js -dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vulkantsk/SpellLibraryLua.git"
+  },
+  "author": "HappyFeedFriends",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vulkantsk/SpellLibraryLua/issues"
+  },
+  "homepage": "https://github.com/vulkantsk/SpellLibraryLua#readme",
+  "dependencies": {
+    "find-steam-app": "^1.0.2"
+  }
+}
