@@ -4,7 +4,7 @@
   "description": "Dota 2 SpellLibrary Lua",
   "main": "index.js",
   "scripts": {
-    "install": "node scripts_install/install.js",
+    "loading": "node scripts_install/install.js",
     "dev": "node scripts_install/install.js -dev"
   },
   "repository": {

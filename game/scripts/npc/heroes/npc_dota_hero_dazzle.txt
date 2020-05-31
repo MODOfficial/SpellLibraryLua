@@ -3,11 +3,13 @@
 	//=================================================================================================================
 	// Dazzle: Poison Touch
 	//=================================================================================================================
-	"dazzle_poison_touch"
+	"ability_poison_touch"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5233"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ScriptFile"					"heroes/dazzle/poison_touch"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"dazzle_poison_touch"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -87,11 +89,13 @@
 	//=================================================================================================================
 	// Dazzle: Shallow Grave
 	//=================================================================================================================
-	"dazzle_shallow_grave"
+	"ability_shallow_grave"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5234"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ScriptFile"					"heroes/dazzle/shallow_grave"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"dazzle_shallow_grave"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
@@ -131,11 +135,13 @@
 	//=================================================================================================================
 	// Dazzle: Shadow Wave
 	//=================================================================================================================
-	"dazzle_shadow_wave"
+	"ability_shadow_wave"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5235"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ScriptFile"					"heroes/dazzle/shadow_wave"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"dazzle_shadow_wave"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -190,23 +196,25 @@
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
-	}
+	} 
 	
 	//=================================================================================================================
 	// Dazzle: Bad Juju
 	//=================================================================================================================
-	"dazzle_bad_juju"
+	"ability_bad_juju"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"7304"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ScriptFile"					"heroes/dazzle/bad_juju"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"dazzle_bad_juju"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Dazzle.Weave"
-		"HasScepterUpgrade"			"1"
+		"HasScepterUpgrade"			"0"
 
 		
 		// Casting
