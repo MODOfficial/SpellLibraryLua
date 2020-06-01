@@ -40,4 +40,9 @@ luac.out
 *.hex
 
 node_modules
-
+.vpk
+.bin
+game/materials
+game/particles
+game/panorama
+game/maps
