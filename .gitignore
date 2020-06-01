@@ -42,7 +42,10 @@ luac.out
 node_modules
 .vpk
 .bin
-game/materials
-game/particles
-game/panorama
+
 game/maps
+game/particles
+game/materials/*
+game/panorama
+game/sounds
+game/soundevents
